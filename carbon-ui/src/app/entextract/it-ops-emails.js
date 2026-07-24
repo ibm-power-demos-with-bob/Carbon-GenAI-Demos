@@ -1,31 +1,32 @@
 // IT Ops Email Scenarios for Entity Extraction Demo
+// Tailored for Premier Farnell / Avnet — electronics distribution context
 
 export const IT_OPS_SCENARIOS = {
   italian_emotional: {
-    title: "Emotional Italian Report Issue",
+    title: "Emotional Italian Inventory System Failure",
     description: "Demonstrates handling emotional language and priority assessment",
     language: "Italian",
-    email: `Oggetto: URGENTE!!! Il sistema di report non funziona - AIUTO!!!
+    email: `Oggetto: URGENTE!!! Il sistema di gestione magazzino non funziona - AIUTO!!!
 
 Caro Team IT,
 
-Sono DISPERATO!!! Il sistema di report è completamente rotto e non riesco a generare il report mensile per il Vice Presidente! La riunione è domani mattina alle 9:00 e io non ho NIENTE da presentare!
+Sono DISPERATO!!! Il nostro sistema di gestione delle scorte è completamente bloccato e non riesco ad elaborare gli ordini in entrata! Abbiamo oltre 300 ordini clienti in coda che non possiamo evadere!
 
-Ho provato tutto - ho riavviato il computer tre volte, ho cancellato la cache, ho pregato... NIENTE FUNZIONA! Il sistema mi dà sempre lo stesso errore: "Errore di connessione al database - timeout dopo 30 secondi".
+Ho provato tutto - ho riavviato il terminale tre volte, ho cancellato la cache, ho chiamato il mio responsabile... NIENTE FUNZIONA! Il sistema continua a darmi lo stesso errore: "Errore di connessione al database di magazzino - timeout dopo 30 secondi".
 
-Questo è un DISASTRO! Il VP mi ha chiesto questo report la settimana scorsa e io gli ho promesso che sarebbe stato pronto. Se non riesco a consegnarlo, potrei perdere il mio lavoro! Ho una famiglia da mantenere, un mutuo da pagare... non posso permettermi di perdere questo lavoro!
+Questo è un DISASTRO! Abbiamo un cliente prioritario - un grande produttore di elettronica - che aspetta un lotto di componenti critici per la sua linea di produzione. Se non spediamo entro le 14:00 di oggi, perdiamo il contratto! Il nostro responsabile commerciale mi ha già chiamato due volte stamattina!
 
-Per favore, per favore, PER FAVORE aiutatemi SUBITO! Sono disposto a restare in ufficio tutta la notte se necessario. Questo è il problema più importante della mia vita professionale!
+Per favore, per favore, PER FAVORE aiutatemi SUBITO! Sono disposto a restare qui tutta la notte se necessario. Questo è il problema più urgente che abbiamo avuto in mesi!
 
-Il report che devo generare è solo un riepilogo delle vendite del mese scorso - niente di troppo complicato, ma il VP lo vuole assolutamente per la riunione di domani.
+Gli ordini bloccati includono componenti SMD, connettori industriali e moduli di alimentazione - materiale che i clienti hanno già pagato e si aspettano oggi!
 
 AIUTATEMI!!!
 
 Cordiali saluti (ma molto stressati),
-Marco Rossi
-Analista Vendite
+Marco Ferretti
+Responsabile Magazzino - Milano
 Tel: +39 02 1234 5678
-Email: marco.rossi@company.it
+Email: marco.ferretti@farnell.it
 
 P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
     entities: [
@@ -43,7 +44,7 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       },
       {
         label: "Business Area",
-        definition: "Which business department or function is affected (e.g., Sales, Logistics, Finance)"
+        definition: "Which business department or function is affected (e.g., Warehouse, Logistics, Sales)"
       },
       {
         label: "Issue Type",
@@ -56,10 +57,6 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       {
         label: "Error Message",
         definition: "Any specific error messages mentioned"
-      },
-      {
-        label: "Time First Encountered",
-        definition: "When did the problem first occur or was first noticed"
       },
       {
         label: "Deadline",
@@ -83,16 +80,16 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       }
     ]
   },
-  
+
   french_professional: {
-    title: "Professional French Safety Critical Issue",
+    title: "Professional French Temperature-Controlled Storage Alert",
     description: "Demonstrates handling professional language and critical safety assessment",
     language: "French",
-    email: `Objet: Incident Critique - Système Logistique Entrepôt B - Risque Sécurité
+    email: `Objet: Incident Critique - Système de Contrôle Température - Entrepôt Composants Sensibles - Risque Sécurité
 
 Bonjour l'équipe IT,
 
-Je vous contacte concernant un incident technique critique affectant le système de gestion logistique de l'entrepôt B.
+Je vous contacte concernant un incident technique critique affectant le système de gestion climatique de notre zone de stockage haute densité.
 
 DÉTAILS TECHNIQUES:
 - Système affecté: Module de contrôle climatique et inventaire (WMS-Climate-Control v3.2)
@@ -101,18 +98,18 @@ DÉTAILS TECHNIQUES:
 - Heure de détection: 14:30 CET aujourd'hui
 
 IMPACT OPÉRATIONNEL:
-Le système ne peut plus surveiller ni réguler la température dans la zone de stockage C, qui contient actuellement 2,400 unités de déodorants en aérosol (produits sous pression). Sans contrôle de température, ces produits présentent un risque d'explosion si la température dépasse 45°C.
+Le système ne peut plus surveiller ni réguler la température dans la zone de stockage C, qui contient actuellement 2,400 unités de composants électroniques sous pression (condensateurs électrolytiques haute tension et batteries lithium-ion). Sans contrôle de température, ces composants présentent un risque de défaillance thermique si la température dépasse 40°C.
 
 La température ambiante actuelle est de 28°C et augmente de 2°C par heure en raison de l'ensoleillement direct sur cette section du bâtiment.
 
 RISQUES IDENTIFIÉS:
-1. Risque de sécurité: Explosion potentielle des aérosols sous pression
+1. Risque de sécurité: Défaillance thermique potentielle des composants sous pression
 2. Risque opérationnel: Impossibilité d'expédier 15 commandes clients (valeur: €47,000)
-3. Risque réglementaire: Non-conformité avec les normes de stockage de produits dangereux (ADR)
+3. Risque réglementaire: Non-conformité avec les normes de stockage de composants dangereux (RoHS/WEEE)
 
 ACTIONS DÉJÀ ENTREPRISES:
 - Notification du responsable sécurité (M. Dubois)
-- Activation du protocole d'urgence pour produits dangereux
+- Activation du protocole d'urgence pour composants sensibles
 - Ventilation manuelle de la zone activée
 - Équipe de sécurité en alerte
 
@@ -122,15 +119,15 @@ Intervention technique urgente requise dans les 2 heures pour:
 2. Vérifier l'intégrité des données d'inventaire
 3. Valider le système de contrôle climatique
 
-Cette situation nécessite une résolution immédiate pour éviter un incident de sécurité majeur et permettre la reprise des expéditions.
+Cette situation nécessite une résolution immédiate pour éviter un incident de sécurité et permettre la reprise des expéditions.
 
 Je reste disponible pour toute information complémentaire.
 
 Cordialement,
 Sophie Lefebvre, Ing.
-Responsable Logistique - Entrepôt B
+Responsable Logistique - Entrepôt Lyon
 Tél: +33 1 45 67 89 00
-Email: sophie.lefebvre@company.fr
+Email: sophie.lefebvre@farnell.fr
 
 Classification: URGENT - SÉCURITÉ`,
     entities: [
@@ -148,7 +145,7 @@ Classification: URGENT - SÉCURITÉ`,
       },
       {
         label: "Business Area",
-        definition: "Which business department or function is affected (e.g., Sales, Logistics, Finance)"
+        definition: "Which business department or function is affected (e.g., Warehouse, Logistics, Sales)"
       },
       {
         label: "Issue Type",
@@ -163,10 +160,6 @@ Classification: URGENT - SÉCURITÉ`,
         definition: "Any specific error codes mentioned"
       },
       {
-        label: "Time First Encountered",
-        definition: "When did the problem first occur or was first noticed"
-      },
-      {
         label: "Response Deadline",
         definition: "Required response time"
       },
@@ -176,7 +169,7 @@ Classification: URGENT - SÉCURITÉ`,
       },
       {
         label: "Safety Risk",
-        definition: "Any safety or health risks mentioned (explosion, fire, injury, etc.)"
+        definition: "Any safety or health risks mentioned (thermal failure, fire, component damage, etc.)"
       },
       {
         label: "Financial Impact",
