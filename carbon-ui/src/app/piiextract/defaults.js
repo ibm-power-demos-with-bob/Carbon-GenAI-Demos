@@ -46,33 +46,33 @@ Note: This data is extracted from the MRZ (Machine Readable Zone) at the bottom 
   ]
 };
 
-// Tab 3: Unstructured Data Discovery - Document Scan (Elinar-inspired)
+// Tab 3: Unstructured Data Discovery - Document Scan (Farnell GDPR/compliance context)
 export const DOCUMENT_SCAN = {
-  free_form_text: `PROJECT STATUS UPDATE - Q1 2024
+  free_form_text: `PROJECT STATUS UPDATE - Q2 2024
 
-Project Phoenix Migration - Internal Memo
+Order Management Platform Migration - Internal Memo
 
-Date: 15 January 2024
+Date: 12 April 2024
 From: IT Operations Team
-Subject: Legacy System Data Audit Progress
+Subject: Legacy Order Data Audit Progress - GDPR Compliance Review
 
 Team Update:
-Our data migration project is progressing well. Lead developer Anna Kowalski (anna.kowalski@techcorp.eu, +48 22 123 4567) has completed the initial database schema review. The technical architecture team, headed by Marcus Weber, identified 847 legacy files requiring assessment.
+Our order management platform migration is progressing well. Lead architect Rachel Hodgson (r.hodgson@farnell.com, +44 113 263 6311) has completed the initial database schema review. The data governance team, headed by Thomas Brandt, identified 1,240 legacy data objects requiring GDPR assessment prior to migration.
 
 Key Findings:
-- Customer database contains approximately 125,000 records
-- Employee records system holds data from 2015-present
-- Marketing automation platform includes email campaigns sent to 89,000 subscribers
+- Customer order database contains approximately 2.4 million records spanning 140 countries
+- B2B account records system holds company and contact data from 2009-present
+- Marketing platform includes registered engineer profiles and product preference data for 620,000 subscribers across the Element14 community
 
 Action Items:
-1. Anna to coordinate with Data Protection Officer by 25 January
-2. Marcus Weber (m.weber@techcorp.eu) to prepare compliance documentation
-3. Schedule review meeting for 1 February 2024 at Berlin office
+1. Rachel to coordinate with Data Protection Officer by 30 April
+2. Thomas Brandt (t.brandt@farnell.com) to prepare GDPR Article 30 Records of Processing documentation
+3. Schedule compliance review meeting for 8 May 2024 at Leeds office
 
 Technical Notes:
-The Phoenix system architecture uses PostgreSQL 14.2 with Redis caching layer. Migration scripts are stored in repository phoenix-migration-2024. Initial testing shows 99.7% data integrity across test environments.
+The new platform architecture uses PostgreSQL 15 with Redis caching layer. Migration scripts are stored in repository order-platform-migration-2024. Initial testing shows 99.8% data integrity across test environments. All customer PII must be identified and tagged before migration proceeds to production.
 
-Contact: For questions, reach Anna Kowalski at extension 4567 or Marcus at +49 30 987 6543.
+Contact: For questions, reach Rachel Hodgson at extension 3311 or Thomas at +49 89 456 7890.
 
 End of memo.`,
   entities: [
@@ -82,7 +82,7 @@ End of memo.`,
     { label: "Job Title/Role", definition: "Professional roles or positions mentioned" },
     { label: "Office Location", definition: "Physical office or workplace locations" },
     { label: "Date", definition: "Specific dates mentioned in the document" },
-    { label: "Record Count", definition: "Numbers indicating quantities of personal data records (e.g., '125,000 records', '89,000 subscribers')" },
+    { label: "Record Count", definition: "Numbers indicating quantities of personal data records (e.g., '2.4 million records', '620,000 subscribers')" },
     { label: "", definition: "" } // optional spare row for the UI
   ]
 };

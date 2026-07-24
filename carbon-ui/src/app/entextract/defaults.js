@@ -1,17 +1,15 @@
 export const DEFAULTS = {
-  free_form_text: `The name of our next book is The Hunger Games. Now, some of you might have read this book earlier, but in
-my personal opinion, reading it again won't hurt, right? It gets even more interesting when we read it a second time.
-So, the author of this book is Suzanne Collins, who wrote many books in the past, but this particular book for her
-has got a rating of 4.33/5, which I think is a pretty good number considering what we just saw for The Book Thief.
-Anyways, this book is a work of fiction, written in English and falls in the Post Apocalyptic genre. This book has 374 pages.
-It was published on the 10th of October, 2005. This book is priced at 5 dollars and 9 cents. If anyone is interested in this book,
-you can approach Mr Hofstadter after this workshop, he will be glad to sell you this book for only 3 dollars.
-Dont miss out this chance to grab such a memorable book.`,
+  free_form_text: `Product listing update: The following item has been submitted for catalogue entry review.
+
+Product reference: SC16-F22-NX
+Description: The product is a 16-bit, dual-channel successive approximation ADC manufactured by Texas Instruments, part number ADS8688IPWR. It operates from a single 5V supply and supports an input voltage range of plus or minus 10V, plus or minus 5V, plus or minus 2.5V, 0 to 10V, and 0 to 5V, selectable per channel. The device is housed in a 24-pin TSSOP package. It is RoHS compliant and AEC-Q100 qualified for automotive and industrial applications. Current stock is 847 units held at the Leeds distribution centre. The list price is 12 pounds and 74 pence per unit. A volume discount of 8 percent applies for orders above 500 units. Lead time for replenishment is 14 weeks from the manufacturer. The datasheet reference is SBAS605C and the product is categorised under Data Acquisition, Analogue to Digital Converters.`,
   entities: [
-    { label: "Title",  definition: "This is the title of the book." },
-    { label: "Author", definition: "This is author of the book. The one who wrote this book." },
-    { label: "Price",  definition: "This is the price of the book." },
-    { label: "Rating", definition: "This is the rating given for this particular book." },
-    { label: "",       definition: "" } // optional spare row for the UI
+    { label: "Part Number",      definition: "The manufacturer part number for this component" },
+    { label: "Manufacturer",     definition: "The company that manufactures this component" },
+    { label: "Product Category", definition: "The product category or classification" },
+    { label: "Unit Price",       definition: "The list price per unit including currency" },
+    { label: "Stock Level",      definition: "Current units held in stock" },
+    { label: "Lead Time",        definition: "Replenishment lead time from the manufacturer" },
+    { label: "",                 definition: "" } // optional spare row for the UI
   ]
 };
