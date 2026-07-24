@@ -1,20 +1,37 @@
 # IBM Power GenAI Demo — Narration Script
 ## Premier Farnell Engagement · For Alex
 
-**Audience:** Head of Infrastructure · Head of Development · IBM i team  
-**Demo URL:** `http://p1265-pvm1.p1265.cecc.ihost.com:3000` *(IBM VPN required)*  
+**Audience:** Head of Infrastructure · Head of Development · IBM i team
+**Demo URL:** `http://p1265-pvm1.p1265.cecc.ihost.com:3000` *(IBM VPN required)*
 **Time budget:** ~20 minutes for the full demo, or pick 3–4 scenarios for a tighter slot
 
 ---
 
-## Before you start — the one sentence that frames everything
+## Session flow — where the demo fits
 
-> *"Everything you're about to see is IBM Granite AI running entirely on an IBM Power server. No cloud. No API keys. No data leaving the machine. That's the point."*
+This demo is the **third act** of a three-part session:
 
-Say this once, up front. It lands differently for each person in the room:
-- **IBM i team** — validates their platform choice
-- **Head of Infrastructure** — answers the "where does our data go?" question before they ask it
-- **Head of Development** — opens the door to the AI on Power conversation
+| Part | Owner | What it establishes |
+|---|---|---|
+| 1 — Bob and the Premium Package | Alex | Bob solves IBM i skill gaps and modernisation today — credibility established |
+| 2 — IBM Power11 | David | The upgrade case, the headroom argument, the platform story |
+| 3 — This demo | Alex | Proof that the headroom runs real AI workloads, built with the same Bob |
+
+**Why this order works:** by the time you open the browser, the audience already understands Bob and already believes in Power11. The demo isn't a pitch — it's a demonstration of something they've already half-decided they want. The closing line *"built with the same Bob we just showed you"* lands as confirmation, not a new idea.
+
+---
+
+## The bridge from David's Power11 section into the demo
+
+David will hand over to you after the Power11 presentation. The handover line:
+
+> *"So we've talked about what Power11 gives you in terms of platform capability and headroom. Alex is going to show you something specific about what that headroom can run — and he's going to show you it running right now, on an IBM Power server."*
+
+Your opening line picking it up:
+
+> *"Everything you're about to see is IBM Granite AI running entirely on an IBM Power server. No cloud. No API keys. No data leaving the machine. And it was built — and tailored for Farnell specifically — using the same Bob we just showed you in part one."*
+
+That single sentence connects all three parts of the session for the audience.
 
 ---
 
@@ -22,7 +39,7 @@ Say this once, up front. It lands differently for each person in the room:
 
 When you open the demo, show the home page briefly.
 
-> *"What we have here is a web application — built with IBM's own design system — running on an IBM Power server in an IBM data centre. The AI model is IBM Granite 4.0. Everything runs on the Power hardware itself."*
+> *"What we have here is a web application running on an IBM Power server in an IBM data centre. The AI model is IBM Granite 4.0. Everything runs on the Power hardware itself."*
 
 > *"We've loaded it with scenarios from Farnell's world specifically — so rather than showing you generic demos, we wanted it to feel a bit more like your environment."*
 
