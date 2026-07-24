@@ -156,6 +156,51 @@ Submit and show the output.
 
 ---
 
+## What Next — closing the conversation into action
+
+This section is the bridge from "interesting demo" to "next meeting." Use it after the demo closes, or weave it into the closing naturally.
+
+---
+
+### The commercial narrative (say this in your own words)
+
+> *"What I want to leave you with is a very practical thought about the Power11 upgrade conversation."*
+
+> *"When you move from Power9 to Power11, you're going to have cores available that you're not using on day one. The IBM i instance is there, Orbit is running, the business is operating — but the platform has capacity that isn't yet allocated."*
+
+> *"Everything you've just seen in this demo — the AI running on the server, the multilingual processing, the document intelligence, the PII handling — all of that ran on a single IBM Power10 virtual machine with standard specs. These are not GPU-heavy, cloud-scale workloads. They are modest, practical AI services that run comfortably on the kind of headroom a Power11 system will have."*
+
+> *"The opportunity is to use that headroom to build services that connect back into IBM i — into Orbit, into your order management flows, into your supply chain data — and deliver genuinely new capabilities to your business without buying new infrastructure to do it."*
+
+---
+
+### The Bob angle — if the conversation goes there
+
+> *"One more thing worth mentioning. We've been using Bob — IBM's AI assistant for builders — throughout this project. Bob helped us tailor this demo specifically for Farnell, write the deployment automation, and generate the scenarios you've just seen."*
+
+> *"If Farnell takes the Premium Package, Bob becomes available to your development team as well. And Bob is not just an IBM i or RPG tool — as you've seen today, it can help you build GenAI services, APIs, modern web applications, deployment pipelines. All the things that sit alongside IBM i and connect to it."*
+
+> *"The open-source route — Granite running on Power, llama.cpp, the kind of stack we've shown today — is genuinely low cost. The commercial adds are support, governance, and IBM standing behind it. Either way, the platform is the same: IBM Power."*
+
+---
+
+### Suggested next steps to propose in the room
+
+| Next step | Who owns it | What it achieves |
+|---|---|---|
+| Power11 sizing conversation | IBM account team + Farnell infrastructure lead | Confirm available core headroom in proposed config |
+| AI use case workshop | Alex + Head of Development | Identify 2–3 IBM i–adjacent use cases to prototype |
+| Bob access / Premium Package conversation | IBM account team | Unlock Bob for the Farnell development team |
+| Proof of concept on TechZone | Alex + Head of Development | Run a small prototype on the AI-on-Power stack |
+
+---
+
+### The one line to close with
+
+> *"You already have the platform. The upgrade gives you the headroom. The question is just what you want to build on it first."*
+
+---
+
 ## Tips for the room
 
 **If the IBM i team wants to go deeper on the platform:**
