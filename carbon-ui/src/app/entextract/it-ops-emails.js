@@ -1,31 +1,33 @@
 // IT Ops Email Scenarios for Entity Extraction Demo
+// LSEG tailoring: Italian (Borsa Italiana, market data) and French (LCH SA, post-trade) streaming incidents.
+// All names, systems, codes and figures are fictional.
 
 export const IT_OPS_SCENARIOS = {
   italian_emotional: {
-    title: "Emotional Italian Report Issue",
-    description: "Demonstrates handling emotional language and priority assessment",
+    title: "Emotional Italian Market Data Feed Issue",
+    description: "Borsa Italiana analyst reports a stalled event stream - demonstrates handling emotional language and priority assessment",
     language: "Italian",
-    email: `Oggetto: URGENTE!!! Il sistema di report non funziona - AIUTO!!!
+    email: `Oggetto: URGENTE!!! Il flusso dati di mercato non si aggiorna - AIUTO!!!
 
 Caro Team IT,
 
-Sono DISPERATO!!! Il sistema di report è completamente rotto e non riesco a generare il report mensile per il Vice Presidente! La riunione è domani mattina alle 9:00 e io non ho NIENTE da presentare!
+Sono DISPERATO!!! Il flusso degli indici FTSE MIB nel nostro report di analisi è fermo e non riesco a generare il riepilogo di fine giornata per il Direttore Dati e Analytics! La riunione è domani mattina alle 9:00 e io non ho NIENTE da presentare!
 
-Ho provato tutto - ho riavviato il computer tre volte, ho cancellato la cache, ho pregato... NIENTE FUNZIONA! Il sistema mi dà sempre lo stesso errore: "Errore di connessione al database - timeout dopo 30 secondi".
+Ho provato tutto - ho riavviato il client tre volte, ho svuotato la cache locale, ho pregato... NIENTE FUNZIONA! Il sistema mi dà sempre lo stesso errore: "Consumer lag superiore alla soglia - timeout dopo 30 secondi sul topic indici.ftsemib.eod".
 
-Questo è un DISASTRO! Il VP mi ha chiesto questo report la settimana scorsa e io gli ho promesso che sarebbe stato pronto. Se non riesco a consegnarlo, potrei perdere il mio lavoro! Ho una famiglia da mantenere, un mutuo da pagare... non posso permettermi di perdere questo lavoro!
+Questo è un DISASTRO! Il Direttore mi ha chiesto questo riepilogo la settimana scorsa e io gli ho promesso che sarebbe stato pronto. Se non riesco a consegnarlo, potrei perdere il mio lavoro! Ho una famiglia da mantenere, un mutuo da pagare... non posso permettermi di perdere questo lavoro!
 
 Per favore, per favore, PER FAVORE aiutatemi SUBITO! Sono disposto a restare in ufficio tutta la notte se necessario. Questo è il problema più importante della mia vita professionale!
 
-Il report che devo generare è solo un riepilogo delle vendite del mese scorso - niente di troppo complicato, ma il VP lo vuole assolutamente per la riunione di domani.
+Il riepilogo che devo generare è solo un confronto dei valori di chiusura degli indici di ieri - niente di troppo complicato, ma il Direttore lo vuole assolutamente per la riunione di domani. I flussi di negoziazione e i dati in tempo reale per i clienti funzionano normalmente.
 
 AIUTATEMI!!!
 
 Cordiali saluti (ma molto stressati),
 Marco Rossi
-Analista Vendite
+Analista Dati di Mercato
 Tel: +39 02 1234 5678
-Email: marco.rossi@company.it
+Email: marco.rossi@example-borsa.it
 
 P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
     entities: [
@@ -43,7 +45,7 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       },
       {
         label: "Business Area",
-        definition: "Which business department or function is affected (e.g., Sales, Logistics, Finance)"
+        definition: "Which business department or function is affected (e.g., Data & Analytics, Markets, Risk Intelligence)"
       },
       {
         label: "Issue Type",
@@ -51,7 +53,7 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       },
       {
         label: "Affected System",
-        definition: "Which system or application is having problems"
+        definition: "Which system, topic or application is having problems"
       },
       {
         label: "Error Message",
@@ -67,7 +69,7 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       },
       {
         label: "Business Impact",
-        definition: "Organizational operational impact only: describe what business task is delayed (e.g. 'Monthly sales report unavailable for VP meeting; core company sales operations continue unaffected'). Ignore personal employment fears."
+        definition: "Organizational operational impact only: describe what business task is delayed (e.g. 'End-of-day index summary unavailable for a management meeting; live customer data and trading flows continue unaffected'). Ignore personal employment fears."
       },
       {
         label: "Emotional State",
@@ -75,64 +77,64 @@ P.S. - HO DAVVERO BISOGNO DI AIUTO URGENTE!!!`,
       },
       {
         label: "True Priority",
-        definition: "Must be exactly one of: Low, Medium, High, Critical. An unavailable internal reporting tool for a meeting is strictly Medium. Critical is only for complete system-wide outages or safety hazards."
+        definition: "Must be exactly one of: Low, Medium, High, Critical. An unavailable internal end-of-day summary for a meeting, with live customer feeds unaffected, is strictly Medium. Critical is only for complete system-wide outages or safety hazards."
       },
       {
         label: "Suggested Solution Area",
-        definition: "Based on the error and symptoms, what technical area should be investigated first (e.g., database connectivity, network, application server, user permissions)"
+        definition: "Based on the error and symptoms, what technical area should be investigated first (e.g., consumer group lag, broker health, network, application server, user permissions)"
       }
     ]
   },
-  
+
   french_professional: {
-    title: "Professional French Safety Critical Issue",
-    description: "Demonstrates handling professional language and critical safety assessment",
+    title: "Professional French Clearing Stream Critical Issue",
+    description: "LCH SA Paris reports a post-trade event stream failure - demonstrates handling professional language and critical operational-resilience assessment",
     language: "French",
-    email: `Objet: Incident Critique - Système Logistique Entrepôt B - Risque Sécurité
+    email: `Objet: Incident Critique - Flux d'événements post-marché Paris - Risque de résilience opérationnelle
 
 Bonjour l'équipe IT,
 
-Je vous contacte concernant un incident technique critique affectant le système de gestion logistique de l'entrepôt B.
+Je vous contacte concernant un incident technique critique affectant le flux d'événements post-marché de la chambre de compensation de Paris.
 
 DÉTAILS TECHNIQUES:
-- Système affecté: Module de contrôle climatique et inventaire (WMS-Climate-Control v3.2)
-- Erreur: Défaillance du système de surveillance de température
-- Code d'erreur: TEMP_SENSOR_FAIL_0x4A7B
+- Système affecté: Cluster de streaming de compensation (CLR-Stream-Paris v3.2)
+- Erreur: Perte du quorum du contrôleur et défaillance de la réplication des partitions
+- Code d'erreur: BROKER_QUORUM_LOST_0x4A7B
 - Heure de détection: 14:30 CET aujourd'hui
 
 IMPACT OPÉRATIONNEL:
-Le système ne peut plus surveiller ni réguler la température dans la zone de stockage C, qui contient actuellement 2,400 unités de déodorants en aérosol (produits sous pression). Sans contrôle de température, ces produits présentent un risque d'explosion si la température dépasse 45°C.
+Le flux ne peut plus publier les confirmations de négociation vers le module de calcul des appels de marge. Environ 2 400 confirmations de négociation par minute s'accumulent en file d'attente. Si le flux n'est pas rétabli avant la clôture de la fenêtre de règlement de 16:30, les appels de marge intrajournaliers ne pourront pas être calculés sur des données à jour.
 
-La température ambiante actuelle est de 28°C et augmente de 2°C par heure en raison de l'ensoleillement direct sur cette section du bâtiment.
+L'arriéré augmente d'environ 2 400 messages par minute depuis la détection.
 
 RISQUES IDENTIFIÉS:
-1. Risque de sécurité: Explosion potentielle des aérosols sous pression
-2. Risque opérationnel: Impossibilité d'expédier 15 commandes clients (valeur: €47,000)
-3. Risque réglementaire: Non-conformité avec les normes de stockage de produits dangereux (ADR)
+1. Risque de résilience: Position de risque des membres compensateurs non à jour pendant la séance
+2. Risque opérationnel: Impossibilité de règlement de 15 lots d'opérations (valeur notionnelle: €47 millions)
+3. Risque réglementaire: Non-conformité avec les exigences de résilience opérationnelle et de déclaration
 
 ACTIONS DÉJÀ ENTREPRISES:
-- Notification du responsable sécurité (M. Dubois)
-- Activation du protocole d'urgence pour produits dangereux
-- Ventilation manuelle de la zone activée
-- Équipe de sécurité en alerte
+- Notification du responsable de la gestion des risques (M. Dubois)
+- Activation du plan de continuité d'activité pour le post-marché
+- Basculement manuel vers le site secondaire demandé
+- Équipe d'astreinte en alerte
 
 DEMANDE:
 Intervention technique urgente requise dans les 2 heures pour:
-1. Restaurer le système de surveillance de température
-2. Vérifier l'intégrité des données d'inventaire
-3. Valider le système de contrôle climatique
+1. Restaurer le quorum et la réplication du cluster
+2. Vérifier l'intégrité et l'ordre des messages en file d'attente
+3. Valider le basculement vers le site secondaire
 
-Cette situation nécessite une résolution immédiate pour éviter un incident de sécurité majeur et permettre la reprise des expéditions.
+Cette situation nécessite une résolution immédiate pour éviter un incident de résilience majeur et permettre la reprise normale du règlement.
 
 Je reste disponible pour toute information complémentaire.
 
 Cordialement,
 Sophie Lefebvre, Ing.
-Responsable Logistique - Entrepôt B
+Responsable Opérations Post-Marché - Paris
 Tél: +33 1 45 67 89 00
-Email: sophie.lefebvre@company.fr
+Email: sophie.lefebvre@example-clearing.fr
 
-Classification: URGENT - SÉCURITÉ`,
+Classification: URGENT - RÉSILIENCE`,
     entities: [
       {
         label: "English Summary",
@@ -148,7 +150,7 @@ Classification: URGENT - SÉCURITÉ`,
       },
       {
         label: "Business Area",
-        definition: "Which business department or function is affected (e.g., Sales, Logistics, Finance)"
+        definition: "Which business department or function is affected (e.g., Post-trade, Clearing, Markets)"
       },
       {
         label: "Issue Type",
@@ -176,7 +178,7 @@ Classification: URGENT - SÉCURITÉ`,
       },
       {
         label: "Safety Risk",
-        definition: "Any safety or health risks mentioned (explosion, fire, injury, etc.)"
+        definition: "Any operational-resilience, systemic-risk or regulatory risk mentioned (for example settlement failure, stale risk positions, reporting breach)"
       },
       {
         label: "Financial Impact",
@@ -184,11 +186,11 @@ Classification: URGENT - SÉCURITÉ`,
       },
       {
         label: "True Priority",
-        definition: "Must be exactly one of: Low, Medium, High, Critical. Guidance: Critical is strictly for immediate safety hazards, risk of explosion/injury, or complete facility shutdown."
+        definition: "Must be exactly one of: Low, Medium, High, Critical. Guidance: Critical is strictly for imminent settlement failure, systemic operational-resilience risk, or complete service shutdown."
       },
       {
         label: "Suggested Solution Area",
-        definition: "Based on the error and symptoms, what technical area should be investigated first (e.g., sensor hardware, climate control system, database, network)"
+        definition: "Based on the error and symptoms, what technical area should be investigated first (e.g., broker quorum, partition replication, network, failover site, database)"
       }
     ]
   }

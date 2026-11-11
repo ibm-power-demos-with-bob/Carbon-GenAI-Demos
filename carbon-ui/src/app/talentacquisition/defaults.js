@@ -1,13 +1,14 @@
+// LSEG tailoring: SCC / IBM hiring for streaming-data architects serving financial markets clients. All fictional.
 export const DEFAULTS = {
   free_form_text: `HIRING REQUEST
-Role title: Senior AI Solutions Architect
+Role title: Senior Streaming Solutions Architect (Financial Markets)
 Department: Enterprise Technology Sales
 Hiring manager: Rebecca Moore
 Location: London with hybrid working
 Employment type: Full-time
 
 Role purpose:
-We need a senior client-facing architect who can work with sales, consulting, and technical delivery teams to shape AI and hybrid cloud opportunities for enterprise customers.
+We need a senior client-facing architect who can work with sales, consulting, and technical delivery teams to shape real-time streaming, AI and hybrid cloud opportunities for financial markets and data-provider customers.
 
 Core responsibilities:
 - Lead technical discovery with prospective clients
@@ -18,14 +19,14 @@ Core responsibilities:
 
 Must-have skills:
 - Enterprise architecture experience
-- AI / data platform knowledge
+- Event streaming and data platform knowledge (Kafka or Confluent)
 - Hybrid cloud and integration experience
 - Strong stakeholder communication skills
 - Experience supporting complex bids or transformation programmes
 
 Preferred skills:
-- Financial services or public sector experience
-- Knowledge of regulated environments
+- Capital markets, post-trade or market data experience
+- Knowledge of regulated environments and operational resilience requirements
 - Experience with Red Hat OpenShift, watsonx, or automation platforms
 
 Tone and writing guidance:
@@ -86,7 +87,7 @@ Supports workflow automation, document processing, and case management solutions
 
 SEARCH REQUEST
 Hiring team wants candidates relevant to:
-- AI solutions architecture
+- Streaming data and AI solutions architecture
 - Hybrid cloud or enterprise platform knowledge
 - Strong client-facing communication
 - Ability to support bids, workshops, and technical discovery
@@ -107,11 +108,11 @@ Create a concise search-and-summary output that makes the candidates easy to bro
 
 export const SHORTLIST_INTERVIEW = {
   free_form_text: `HIRING CONTEXT
-Role title: Senior AI Solutions Architect
+Role title: Senior Streaming Solutions Architect (Financial Markets)
 Priority criteria:
 - Strong client-facing communication
 - Technical discovery and architecture capability
-- AI or hybrid cloud experience
+- Streaming data, AI or hybrid cloud experience
 - Ability to support proposals and executive workshops
 - Experience in regulated or enterprise environments preferred
 

@@ -1,45 +1,29 @@
 export const DEFAULTS = {
-  free_form_text: `Sales Agent: Good afternoon, this is Sophie Laurent from G2 EMEA. Am I speaking with Thomas Müller?
+  free_form_text: `SCC Account Director: Good afternoon, this is Sophie Laurent from SCC. Am I speaking with Thomas Whitfield, Head of Platform Engineering at LSEG?
 
-Client: Yes, speaking. Hello Sophie.
+Client: Yes, speaking. Thanks for making time, Sophie.
 
-Sales Agent: Excellent! Thank you for taking my call. I'm reaching out because you recently downloaded our buyer intent report for the financial services sector. I wanted to see if you had a chance to review it and whether you'd like to discuss how G2's solutions could help Deutsche FinTech Solutions increase your market visibility.
+SCC Account Director: Thank you, Thomas. As I mentioned in my email, I wanted to follow up on the proposal we sent your CTO about expanding your Confluent subscription through SCC. Can you tell me where things stand on your side?
 
-Client: Yes, I did have a look. We're currently exploring ways to improve our lead generation, particularly in the DACH region. Our marketing team is struggling to identify prospects who are actively researching solutions like ours.
+Client: Sure. Today Confluent runs for the Markets Technology programme only. It works well, but every other division has built its own point-to-point integrations. Data and Analytics, FTSE Russell and Risk Intelligence all move data in different ways, and each new acquisition adds another set of pipelines.
 
-Sales Agent: That's exactly what we specialise in. We work with over 200 financial technology companies across Europe. Can you tell me a bit more about your current challenges? What's your primary goal for the next quarter?
+SCC Account Director: That matches what we saw in public material. What is the biggest pain point right now?
 
-Client: Well, we've just launched a new payment processing platform, and we need to reach CFOs and finance directors at mid-sized enterprises - companies with 100 to 500 employees. Our sales team is spending too much time on cold outreach with low conversion rates. We need warmer leads.
+Client: Two things. First, onboarding acquired data. After each deal we spend months building one-off ETL before customers see any value. Second, resilience. Our regulators expect us to show we can recover event flows quickly, and today that evidence is manual.
 
-Sales Agent: I understand completely. We have two main solutions that could help. First, our Buyer Intent data identifies companies actively researching payment processing solutions on G2 - we track over 90 million buyers annually. Second, our Review Generation programme helps you build social proof, which is crucial in financial services where trust is paramount. Which approach sounds more aligned with your immediate needs?
+SCC Account Director: Understood. With a shared platform, a governed schema registry and managed connectors, we have seen onboarding cycles shorten significantly. We would size it with your team rather than promise a number. On the commercial side, would transitioning at your March renewal work?
 
-Client: The buyer intent data sounds very interesting. How does that actually work in practice?
+Client: That is the natural point. The current contract is with the vendor directly. If SCC can co-term and guarantee no disruption to live services, I can take it to the CTO. Budget-wise we are looking at roughly 3 million pounds a year for the expanded scope, subject to the business case.
 
-Sales Agent: Great question. We track anonymous visitors to your G2 profile and your competitors' profiles. When a company shows high intent - for example, viewing multiple payment processing solutions, reading reviews, and comparing features - we identify that company and provide you with their details, including company size, location, and the specific solutions they're researching. Your sales team can then reach out with highly targeted messaging.
+SCC Account Director: That is in line with what we modelled. Are you evaluating alternatives?
 
-Client: That could be quite valuable. What about pricing? We have a budget of approximately €50,000 for marketing technology this year, and we're already using Salesforce and HubSpot.
+Client: We looked at running open source Apache Kafka ourselves and at a cloud provider's managed streaming service. Neither gives us the governance or the hybrid deployment flexibility we need, but procurement will want to see the comparison.
 
-Sales Agent: Perfect - we integrate seamlessly with both platforms. For your requirements, our Professional Intent package would be ideal. It's €3,500 per month, which includes up to 150 qualified intent signals monthly, CRM integration, and a dedicated customer success manager. That's €42,000 annually, well within your budget. We also offer a 90-day pilot programme if you'd like to test the ROI before committing to the full year.
+SCC Account Director: Fair. I will include a side-by-side in the proposal. Could we hold a 90-minute architecture and value session next Thursday?
 
-Client: The pilot sounds sensible. What kind of results are your financial services clients seeing?
+Client: Thursday at 10:00 works well. I'll invite Priya from the risk side as well.
 
-Sales Agent: Excellent question. Our FinTech clients typically see a 40-60% increase in qualified pipeline within the first quarter. For example, PaymentHub in Amsterdam saw a 55% increase in demo bookings and reduced their sales cycle from 90 days to 60 days. I can send you a detailed case study if that would be helpful.
-
-Client: Yes, please do. I'll need to discuss this with our CMO, Rebecca Schmidt, and our Head of Sales. Can you send me a proposal with the case studies and implementation timeline?
-
-Sales Agent: Absolutely. I'll prepare a comprehensive proposal and send it to your email by tomorrow morning. Would you prefer I include information about our Review Generation programme as well, or focus solely on the Buyer Intent solution for now?
-
-Client: Let's focus on the intent data for now. We can explore reviews in a future conversation.
-
-Sales Agent: Perfect. I'll send everything to thomas.muller@deutschefintech.de - is that correct?
-
-Client: Yes, that's correct.
-
-Sales Agent: Wonderful. I'll also include some information about our GDPR compliance and data privacy measures, as I know that's critical for financial services companies. Would next Thursday at 10:00 CET work for a follow-up call to discuss the proposal with you and your team?
-
-Client: Thursday at 10:00 works well. I'll have Rebecca join the call as well.
-
-Sales Agent: Excellent! I'll send a calendar invitation. Thank you for your time today, Thomas. I look forward to speaking with you and Rebecca next week.
+SCC Account Director: Excellent. I'll send a calendar invitation and a transition plan outline beforehand. Thank you for your time today, Thomas.
 
 Client: Thank you, Sophie. Speak soon.`,
   entities: [
@@ -58,44 +42,23 @@ Client: Thank you, Sophie. Speak soon.`,
 };
 
 // Tab 2: Multilingual Customer Service with Sentiment Analysis
+// LSEG tailoring: German-language call to a Data & Analytics support desk about a delayed market data feed
 export const SALES_CALL = {
-  free_form_text: `Kundenservice: Guten Tag, hier ist Anna von TechSupport Deutschland. Wie kann ich Ihnen heute helfen?
+  free_form_text: `Kundenservice: Guten Tag, hier ist Anna vom Data-&-Analytics-Support. Wie kann ich Ihnen heute helfen?
 
-Kunde: Endlich! Ich warte schon seit 45 Minuten in der Warteschleife! Das ist absolut inakzeptabel!
+Kunde: Guten Tag. Mein Name ist Schmidt, ich bin Handelsleiter bei einer Frankfurter Vermögensverwaltung. Ich bin ehrlich gesagt sehr verärgert. Seit heute Morgen kommen die Kursdaten für unsere Handelsdesks mit mehreren Minuten Verzögerung an!
 
-Kundenservice: Es tut mir sehr leid für die lange Wartezeit, Herr Schmidt. Ich verstehe Ihre Frustration vollkommen. Lassen Sie mich Ihnen sofort helfen. Was ist das Problem?
+Kundenservice: Das tut mir sehr leid, Herr Schmidt. Das ist natürlich inakzeptabel, wenn Sie Handelsentscheidungen darauf stützen. Können Sie mir sagen, seit wann genau Sie das beobachten und welche Datenfeeds betroffen sind?
 
-Kunde: Unser gesamtes System ist seit heute Morgen 8 Uhr ausgefallen. Wir haben 30 Mitarbeiter, die nicht arbeiten können! Das kostet uns Tausende von Euro pro Stunde! Ich habe bereits drei E-Mails geschickt und niemand hat geantwortet!
+Kunde: Seit etwa 08:15 Uhr. Betroffen sind die Aktienkurse und die Indexwerte. Wir haben heute eine große Umschichtung geplant, und mein Team arbeitet praktisch blind. Das ist völlig inakzeptabel!
 
-Kundenservice: Das ist natürlich eine sehr ernste Situation. Ich sehe hier Ihre E-Mails und entschuldige mich, dass wir nicht schneller reagiert haben. Lassen Sie mich sofort Ihre Kundennummer überprüfen. Können Sie mir bitte Ihre Vertragsnummer geben?
+Kundenservice: Ich verstehe, das ist für Sie geschäftskritisch. Ich stufe das Ticket sofort als dringend ein und verbinde Sie mit meinem Kollegen Herrn Weber aus dem technischen Betrieb. Bitte bleiben Sie in der Leitung.
 
-Kunde: Die Vertragsnummer ist DE-2024-8756. Aber ich brauche keine Überprüfung, ich brauche eine Lösung! Sofort!
+Kundenservice (Herr Weber): Guten Tag, Herr Schmidt, hier ist Weber. Wir haben die Ursache gefunden: Ein Verbraucher-Rückstau auf einem Ereignisstrom in unserem europäischen Rechenzentrum. Wir leiten Ihren Feed gerade auf den Ausweichcluster um. Die Daten sollten in etwa zehn Minuten wieder in Echtzeit laufen.
 
-Kundenservice: Ich verstehe, Herr Schmidt. Ich habe Ihr Konto jetzt geöffnet. Ich sehe, dass Sie unseren Premium-Support-Vertrag haben, was bedeutet, dass ich dies sofort an unser technisches Notfallteam eskalieren kann. Können Sie mir kurz beschreiben, welche Fehlermeldung Sie sehen?
+Kunde: Zehn Minuten sind lang, aber gut, dass es eine konkrete Lösung gibt. Und was ist mit den bereits verpassten Daten?
 
-Kunde: Es kommt eine Meldung "Verbindung zum Server fehlgeschlagen - Error 503". Alle unsere Anwendungen sind betroffen - CRM, E-Mail, Buchhaltung, alles!
-
-Kundenservice: Danke für diese Information. Error 503 deutet auf ein Serverproblem hin. Ich erstelle jetzt ein Notfall-Ticket mit höchster Priorität und verbinde Sie direkt mit unserem Senior-Techniker, Markus Weber. Er ist unser Spezialist für solche Fälle. Können Sie bitte einen Moment in der Leitung bleiben?
-
-Kunde: Ja, aber bitte schnell!
-
-[2 Minuten Wartezeit]
-
-Senior-Techniker: Guten Tag, Herr Schmidt. Hier ist Markus Weber vom technischen Team. Ich habe bereits Ihre Systemlogs überprüft. Wir hatten heute Morgen um 7:45 Uhr ein automatisches Update, das bei einigen Kunden zu Problemen geführt hat. Ich kann das Update für Sie zurückrollen. Das dauert etwa 10 Minuten.
-
-Kunde: Endlich jemand, der weiß, was er tut! Ja, bitte machen Sie das sofort!
-
-Senior-Techniker: Ich starte den Rollback jetzt. Sie sollten in etwa 8-10 Minuten wieder Zugriff haben. Ich bleibe die ganze Zeit in der Leitung und überwache den Prozess. Außerdem werde ich sicherstellen, dass Ihr System von zukünftigen automatischen Updates ausgenommen wird, bis wir das Problem vollständig gelöst haben.
-
-Kunde: Das klingt gut. Ich schätze, dass Sie sich jetzt persönlich darum kümmern.
-
-[8 Minuten später]
-
-Senior-Techniker: Herr Schmidt, der Rollback ist abgeschlossen. Können Sie bitte versuchen, sich anzumelden?
-
-Kunde: Moment... Ja! Es funktioniert wieder! Alle Systeme sind online. Gott sei Dank!
-
-Senior-Techniker: Ausgezeichnet! Ich habe auch eine Gutschrift von zwei Wochen auf Ihren nächsten Rechnungszyklus hinzugefügt als Entschädigung für die Unannehmlichkeiten. Außerdem erhalten Sie einen detaillierten Bericht über den Vorfall bis morgen Mittag.
+Kundenservice (Herr Weber): Alle Ereignisse wurden gespeichert und werden nach der Umleitung in der richtigen Reihenfolge nachgeliefert. Es geht nichts verloren. Für die Unannehmlichkeiten schreiben wir Ihnen außerdem die Gebühr für den heutigen Tag gut.
 
 Kunde: Das ist sehr fair. Vielen Dank für Ihre schnelle Hilfe, Herr Weber. Und auch Danke an Anna, die mich sofort weitergeleitet hat. Ich war am Anfang sehr wütend, aber Sie haben das wirklich professionell gelöst.
 
@@ -120,70 +83,37 @@ Kunde: Nein, das war alles. Danke und einen schönen Tag noch!`,
 };
 
 // Tab 3: Meeting Intelligence & Action Items
+// LSEG tailoring: internal architecture and value session on a shared streaming platform
 export const SUPPORT_TICKET = {
-  free_form_text: `Product Strategy Meeting - Q2 2024 Planning
-Date: March 25, 2024, 10:00-11:30 AM CET
-Attendees: Sarah Chen (Product Director), Marcus Weber (Engineering Lead), Lisa Anderson (UX Lead), James O'Brien (Marketing Manager)
+  free_form_text: `Streaming Platform Architecture and Value Session - FY2027 Planning
+Date: 12 November 2026, 10:00-11:30 AM GMT
+Attendees: Thomas Whitfield (Head of Platform Engineering), Priya Raman (Head of Operational Resilience), Daniel Okafor (Data & Analytics Architect), Sophie Laurent (SCC Account Director)
 
-Sarah Chen: Good morning everyone. Thanks for joining. Today we need to finalize our Q2 roadmap and make some key decisions about the mobile app redesign. Let's start with where we are. Marcus, can you give us a status update on the current development sprint?
+Thomas Whitfield: Good morning everyone. Thanks for joining. Today we want to agree which expansion scenarios to take forward and what a no-disruption transition at the March renewal looks like. Daniel, where are we on the current Confluent estate?
 
-Marcus Weber: Sure. We're 80% through Sprint 23. The API performance improvements are complete and tested. However, we've hit a blocker with the new authentication system - it's not compatible with our legacy user database. We need to decide whether to refactor the database or build a compatibility layer.
+Daniel Okafor: The Markets Technology programme runs about forty topics across two clusters. Data and Analytics is on a separate set of file-based feeds. We could move the index and reference data distribution onto the platform first, but we would need a schema governance model before we publish anything to more consumers.
 
-Sarah Chen: That's a critical decision. What's your recommendation?
+Thomas Whitfield: That is the right order. Priya, from the resilience side, what do you need?
 
-Marcus Weber: The compatibility layer is faster - about 2 weeks. But refactoring the database is the right long-term solution, though it'll take 6 weeks. My team recommends the refactor, but we'd need to push the mobile app launch from May to July.
+Priya Raman: Evidence. Our regulators expect us to show recovery time for critical event flows. Today that is gathered by hand after incidents. If the shared platform gives us replayable streams and a failover test we can run on a schedule, that is a real benefit. I would put post-trade and settlement visibility first.
 
-Lisa Anderson: From a UX perspective, I'd rather have a solid foundation. We've been getting user complaints about slow login times. If we do the refactor properly, we can improve performance significantly. I support the 6-week option.
+Thomas Whitfield: Agreed. Sophie, can SCC support both while keeping live services untouched?
 
-James O'Brien: Marketing perspective - we've already announced a May launch to our beta users. Pushing to July could damage credibility. Can we do a phased approach? Launch basic features in May and add the performance improvements in June?
+Sophie Laurent: Yes. We would baseline the current contract and usage first, co-term to the March date, and only add capacity for the scenarios you select. Support is UK-based, 24/7 for critical systems, with one escalation path into IBM and Confluent.
 
-Sarah Chen: That's an interesting compromise. Marcus, is that technically feasible?
+Daniel Okafor: One concern: connectors for the newly acquired data asset. If we reuse a repeatable pattern we avoid another set of one-off pipelines, but it needs a security review first.
 
-Marcus Weber: Yes, we could do that. We'd launch with the compatibility layer in May, then do the database refactor in the background and switch over in June. It means doing the work twice, but it keeps us on schedule.
+Thomas Whitfield: Then the decision is: scenario two, real-time post-trade and settlement, goes first, and scenario three, acquired data onboarding, second. Scenario four, the AI-ready foundation, waits until governance is in place. Let me summarise the actions.
 
-Sarah Chen: Okay, let's go with the phased approach. Marcus, you'll own the technical implementation. Target is May 15th for initial launch, June 30th for the performance upgrade. James, you'll need to manage communications about the phased rollout. Lisa, I need you to prioritize which features go into the May release versus June.
+Thomas Whitfield: Daniel, document the current topic inventory and consumer groups by 20 November. Priya, define the recovery-time evidence requirements by 27 November. Sophie, send the co-term and transition plan outline by 24 November. I will take the scenario sizing to the CTO before the end of the month. And Daniel, please start the connector security review for the acquired data asset by 4 December.
 
-Lisa Anderson: Got it. I'll have a feature priority list by end of this week. One thing though - we still haven't resolved the navigation redesign debate. The user testing showed mixed results. Some users loved the bottom navigation, others preferred the hamburger menu.
+Priya Raman: One open question: do we keep the second cluster self-managed or move it to a managed service? Cost and data residency will drive that.
 
-James O'Brien: The analytics show that 65% of our users are on iOS, and iOS users strongly prefer bottom navigation. I think we should go with that.
+Thomas Whitfield: Let's park that for the next session. When is it?
 
-Marcus Weber: From an engineering standpoint, bottom navigation is actually simpler to implement. It's also more accessible. I vote for bottom navigation.
+Sophie Laurent: I suggest 8 December at the same time, once the inventory and the evidence requirements are in.
 
-Sarah Chen: Agreed. Let's go with bottom navigation. Lisa, can you finalize those designs by next Tuesday?
-
-Lisa Anderson: Yes, I'll have them ready for review by Tuesday afternoon.
-
-Sarah Chen: Perfect. Now, let's talk about the AI features roadmap. We've had requests for AI-powered search and recommendations. James, what's the market demand looking like?
-
-James O'Brien: It's huge. Our competitor analysis shows that 4 out of 5 major competitors have launched AI features in the last quarter. We're falling behind. I think we need to prioritize this for Q3 at the latest.
-
-Sarah Chen: Marcus, what's the technical feasibility?
-
-Marcus Weber: We'd need to integrate with an AI service provider. I've been evaluating options - we could use IBM watsonx, OpenAI, or build something custom. IBM watsonx makes the most sense for our enterprise customers due to data privacy and compliance. Implementation would take about 8-10 weeks.
-
-Sarah Chen: Okay, let's plan for Q3. Marcus, I need you to prepare a detailed technical proposal with cost estimates by April 15th. James, you'll work on the business case and ROI projections. We'll present to the executive team in late April.
-
-Lisa Anderson: Should I start thinking about the UX for AI features?
-
-Sarah Chen: Yes, but keep it exploratory for now. We need executive approval first. Do some concept designs that we can use in the presentation.
-
-Marcus Weber: One more thing - we need to discuss the infrastructure costs. Our cloud spending has increased 40% this quarter due to the increased user base. We need to either optimize our architecture or increase the budget.
-
-Sarah Chen: That's concerning. Can you quantify the optimization potential?
-
-Marcus Weber: My team estimates we can reduce costs by 25-30% through better caching, database optimization, and moving some workloads to reserved instances. But it'll take dedicated engineering time - probably 3-4 weeks of work.
-
-Sarah Chen: That's a good ROI. Let's make that a priority for April. Marcus, assign someone from your team to lead the optimization project. I want weekly progress reports.
-
-Marcus Weber: Will do. I'll assign Chen Li - she's our infrastructure specialist.
-
-Sarah Chen: Excellent. Let me summarize our action items and decisions. Any questions before we wrap up?
-
-James O'Brien: Just one - when's our next strategy meeting?
-
-Sarah Chen: Let's schedule for April 22nd, same time. That gives us time to complete the AI proposal and see progress on the mobile launch. I'll send out the calendar invite.
-
-Lisa Anderson: Sounds good. Thanks everyone!`,
+Priya Raman: Sounds good. Thanks everyone!`,
   entities: [
     { label: "Meeting Summary", definition: "A concise 2-3 sentence summary of the meeting's key discussion points and outcomes" },
     { label: "Meeting Type", definition: "Category of meeting. Choose from: Planning, Review, Brainstorm, Decision-making, Status Update, Strategy, Other" },

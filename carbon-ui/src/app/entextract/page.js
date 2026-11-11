@@ -180,7 +180,7 @@ export default function EntityExtractionPage() {
 
   // Get demo tab name for display
   const getDemoTabName = (tabIndex) => {
-    const names = ['Why IBM Power', 'Book Review', 'IT Ops Email', 'Quote Email', 'What We\'re Using'];
+    const names = ['Why IBM Power', 'Subscription Summary', 'IT Ops Email', 'Quote Email', 'What We\'re Using'];
     return names[tabIndex] || 'Demo';
   };
 
@@ -199,7 +199,7 @@ export default function EntityExtractionPage() {
         <Tabs selectedIndex={activeTab} onChange={({ selectedIndex }) => setActiveTab(selectedIndex)}>
           <TabList className="tabs-group" aria-label="Tab navigation">
             <Tab>Why IBM Power</Tab>
-            <Tab>Book Review</Tab>
+            <Tab>Subscription Summary</Tab>
             <Tab>IT Ops Email</Tab>
             <Tab>Quote Email</Tab>
             <Tab>What We're Using</Tab>
@@ -397,8 +397,9 @@ export default function EntityExtractionPage() {
                   <h3 className="landing-page__subheading">Extract key points from unstructured text</h3>
                   <p className="landing-page__p">
                     In this version of the Entity Extraction demo, we will use the LLM
-                    running in this IBM Power Virtual Server to extract details about
-                    a book from the unstructured text below. You can alter the text to
+                    running in this IBM Power Virtual Server to extract the platform,
+                    partner, contract values, renewal date and contact from an internal
+                    subscription summary. You can alter the text to
                     test getting results from different inputs. This demo comes from an
                     example from the Granite Cafe, which you can see more about by
                     following the link below.
@@ -411,7 +412,7 @@ export default function EntityExtractionPage() {
                   <Image
                     className="landing-page__illo"
                     src="https://assets.ibm.com/is/image/ibm/thinkstudio?$original$"
-                    alt="People Studying Books"
+                    alt="People collaborating on a technology review"
                     width={500}
                     height={208}
                   />

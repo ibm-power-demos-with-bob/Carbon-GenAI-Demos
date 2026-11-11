@@ -1,28 +1,30 @@
+// LSEG tailoring: marketing briefs built around real-time data products, events and the SCC / IBM partner motion.
+// All scenarios are illustrative and fictional.
 export const DEFAULTS = {
-  free_form_text: `Campaign request: Create a launch brief for a new product feature called Smart Route Optimizer.
+  free_form_text: `Campaign request: Create a launch brief for a new product feature called Real-Time Index Stream.
 
 Product details:
-- Feature: Smart Route Optimizer
-- Product: FleetFlow logistics platform
-- What it does: Uses AI to recommend more efficient delivery routes based on traffic, depot constraints, weather, and delivery priority
-- Primary benefit: Reduces fuel usage and late deliveries while helping dispatchers plan faster
+- Feature: Real-Time Index Stream
+- Product: Index and reference data distribution service (FTSE Russell-style benchmark data)
+- What it does: Publishes index levels, constituent changes and reference data as governed, replayable event streams that customers subscribe to, instead of waiting for end-of-day files
+- Primary benefit: Gives asset managers, ETF issuers and trading desks index data when it changes, with a full replayable history for audit
 - Launch type: Existing product feature launch
-- Launch timing: Mid-May
-- Target audience: Operations directors, dispatch managers, and logistics transformation leads at mid-sized transport and distribution companies
-- Geography: UK and Northern Europe
+- Launch timing: Mid-March
+- Target audience: Heads of data, index operations leads, and portfolio technology leaders at asset managers and ETF issuers
+- Geography: UK, Europe and North America
 - Differentiators:
-  1. Runs recommendations inside the customer's existing planning workflow
-  2. Gives planners explanations for why route changes are suggested
-  3. Designed for companies that need data to stay within their own environment
+  1. Publish once, serve many consumers, with schemas governed centrally
+  2. Replayable streams that make audit and reconciliation simple
+  3. Delivered through hybrid deployment options for regulated customers who need to control where data runs
 - Customer pain points:
-  1. Rising fuel costs
-  2. Frequent route changes due to delays and road disruptions
-  3. Too much manual planning effort
-  4. Pressure to improve service reliability and sustainability KPIs
+  1. Batch files that arrive hours after the market has moved
+  2. Brittle point-to-point integrations with each internal system
+  3. Manual reconciliation when index changes are corrected
+  4. Pressure to evidence operational resilience to regulators
 
 Tone and style:
 - Tone: Confident, practical, business-focused
-- Style: Clear, concise, enterprise B2B marketing language
+- Style: Clear, concise, enterprise B2B financial-services language
 - Avoid: Hype, buzzwords, unsupported claims
 
 Required output guidance:
@@ -45,24 +47,24 @@ Required output guidance:
 };
 
 export const EVENT_CAMPAIGN = {
-  free_form_text: `Campaign request: Build an event campaign brief for our presence at the Future of Manufacturing Summit in Munich.
+  free_form_text: `Campaign request: Build an event campaign brief for our presence at a major financial markets technology conference in London.
 
 Event details:
-- Event: Future of Manufacturing Summit
+- Event: Financial Markets Data and Technology Forum (fictional example)
 - Format: In-person industry conference with sponsorship booth and speaking session
 - Date: 18-19 June
-- Location: Munich
-- Company goal: Generate qualified meetings and pipeline for our industrial AI monitoring solution
-- Audience: Plant managers, heads of operations, digital transformation leads, and manufacturing IT leaders
-- Main offer: AI-powered equipment anomaly detection running on-premises
-- Business problem solved: Reduces unplanned downtime and improves maintenance decision-making
+- Location: London
+- Company goal: Generate qualified meetings and pipeline for our real-time data distribution and post-trade streaming solutions
+- Audience: Chief data officers, heads of market data, post-trade technology leads, and operational resilience owners
+- Main offer: Governed real-time data streaming across trading, clearing, index and risk workflows, deployable on hybrid infrastructure
+- Business problem solved: Removes brittle point-to-point integrations and gives regulated firms replayable evidence of event flows
 - Key differentiators:
-  1. On-premises deployment for data-sensitive manufacturing environments
-  2. Fast time to insight from existing machine data
-  3. Works alongside current operational systems without major replacement
+  1. Hybrid and on-premises deployment options for regulated environments
+  2. Fast onboarding of newly acquired data assets using repeatable connector patterns
+  3. Works alongside existing platforms without a rip-and-replace
 - Desired outcomes:
   1. Book executive meetings at the event
-  2. Drive post-event demo requests
+  2. Drive post-event architecture session requests
   3. Build awareness before the keynote session
 - Available channels:
   1. Email
@@ -87,17 +89,17 @@ Event details:
 };
 
 export const PARTNER_ENABLEMENT = {
-  free_form_text: `Campaign request: Create a partner enablement brief for a joint solution launch with NorthBridge Consulting.
+  free_form_text: `Campaign request: Create a partner enablement brief for the SCC and IBM joint motion to expand Confluent in financial services.
 
 Partner details:
-- Partner: NorthBridge Consulting
-- Joint offer: Advisory plus implementation package for our secure document intelligence platform
-- Launch goal: Enable NorthBridge sales and marketing teams to position the joint solution to financial services clients
-- Target audience: Banking operations leaders, compliance teams, and transformation sponsors
+- Partner: SCC (IBM UK Platinum partner)
+- Joint offer: Confluent subscription expansion through SCC, with assessment, delivery, UK-based 24/7 support and consumption governance
+- Launch goal: Enable SCC sellers and IBM sellers to position the joint offer to capital markets and data providers, starting with a Chief Technology Officer audience
+- Target audience: CTOs, heads of platform engineering, and operational resilience leaders at financial markets infrastructure firms
 - Joint value proposition:
-  1. Faster document-heavy process modernization
-  2. Stronger governance and auditability
-  3. Lower risk by keeping sensitive information within controlled environments
+  1. One accountable UK partner across Confluent and the wider IBM portfolio
+  2. Streaming that supports post-trade, data distribution and acquisition integration
+  3. Governed, hybrid deployment suited to regulated firms
 - Enablement needs:
   1. Clear positioning statement
   2. Sales talk track

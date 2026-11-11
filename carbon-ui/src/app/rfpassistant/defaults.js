@@ -1,34 +1,35 @@
+// LSEG tailoring: the bidder is SCC / IBM; opportunities are illustrative LSEG-style programmes. All fictional.
 export const DEFAULTS = {
   free_form_text: `COMPANY PROFILE
-Company name: IBM
-Company description: We offer enterprise-grade AI, hybrid cloud, IT services, infrastructure, and consulting solutions to businesses and public sector organizations.
+Company name: SCC, working with IBM
+Company description: UK IBM Platinum partner delivering IBM hybrid cloud, data, AI and Confluent streaming solutions with UK-based 24/7 support.
 Core strengths:
-- Hybrid cloud platform and integration expertise
-- AI and data platforms for regulated environments
-- Security, compliance, and governance capabilities
-- Large-scale delivery and managed services
+- Hybrid cloud and integration expertise
+- Streaming data and AI platforms for regulated environments
+- Security, resilience, and governance capabilities
+- Pre- and post-sales delivery with dedicated IBM specialists
 Preferred deal profile:
-- Multi-year transformation programmes
-- Mission-critical infrastructure and application modernization
-- Regulated industries and public sector buyers
+- Multi-year platform expansions with consumption governance
+- Mission-critical infrastructure and data modernization
+- Regulated financial markets buyers
 
 RFP OPPORTUNITY
-Opportunity title: National Digital Services Authority - Sovereign AI Infrastructure Modernization
-Buyer: National Digital Services Authority
-Sector: Public sector
-Contract value: £18M over 4 years
+Opportunity title: Global Markets Infrastructure Group - Shared Streaming Platform Expansion (illustrative)
+Buyer: Global Markets Infrastructure Group
+Sector: Financial markets infrastructure
+Contract value: £9.6M over 3 years
 Submission deadline: 30 June
 Scope summary:
-The authority is seeking a supplier to modernize its infrastructure for AI-assisted citizen service operations. The solution must support on-premises or sovereign deployment, integrate with existing case management systems, provide strong security controls, and include transition, implementation, and managed support services.
+The group is seeking a partner to expand an existing streaming platform subscription from one programme to four divisions. The solution must support hybrid deployment, integrate with existing data distribution and post-trade systems, provide strong governance and resilience evidence, and include transition, delivery, and managed support services.
 Key requirements:
-1. Sovereign or on-premises deployment model
-2. Integration with existing public sector systems
-3. Strong security, auditability, and role-based access control
-4. Service transition plan with minimal disruption
-5. Delivery capability across architecture, implementation, and support
+1. Hybrid or self-managed deployment model
+2. Integration with existing market data, clearing and risk systems
+3. Governed schemas, auditability, and role-based access control
+4. Transition at renewal with no disruption to live services
+5. Delivery capability across architecture, implementation, and 24/7 support
 Evaluation criteria:
 - Technical fit 35%
-- Security and compliance 25%
+- Resilience and compliance 25%
 - Delivery capability 20%
 - Commercial value 20%
 
@@ -47,32 +48,32 @@ Review this opportunity and generate a polished response pack that helps a bid t
 
 export const PROPOSAL_DRAFTING = {
   free_form_text: `COMPANY PROFILE
-Company name: IBM
-Company description: We offer enterprise-grade AI, hybrid cloud, IT services, and consulting solutions to global enterprises.
+Company name: SCC, working with IBM
+Company description: UK IBM Platinum partner offering hybrid cloud, streaming data, AI and managed services to regulated enterprises.
 Relevant capabilities:
-- Hybrid cloud transformation
-- Application modernization
-- AI and automation services
+- Confluent streaming platform delivery and support
+- Application and data modernization
+- AI and automation services on IBM watsonx
 - Managed infrastructure services
 - Consulting-led transformation programmes
 
 RFP OPPORTUNITY
-Opportunity title: EuroRetail Group - Hybrid Cloud Operations Transformation
-Buyer: EuroRetail Group
-Sector: Retail
-Contract value: €9M over 3 years
+Opportunity title: Digital Settlement Platform - Real-Time Post-Trade Event Layer (illustrative)
+Buyer: Digital Settlement Platform Operator
+Sector: Financial markets infrastructure
+Contract value: £5M over 3 years
 Submission deadline: 12 July
 Business challenge:
-EuroRetail Group wants to modernize its fragmented infrastructure across store, distribution, and head-office environments. The selected partner must design a hybrid cloud operating model, migrate priority workloads, improve resilience, and support future AI-enabled retail operations.
+The operator wants a real-time event layer that gives a consolidated view of trades, market data and reference data across clearing and settlement. The selected partner must design the target architecture, deliver ISO 20022-aligned event streams, improve resilience, and support future AI-enabled monitoring.
 Required scope:
 1. Discovery and current-state assessment
-2. Hybrid cloud target architecture
+2. Streaming target architecture across hybrid infrastructure
 3. Migration roadmap with phased implementation
-4. Security and operational governance model
+4. Security, schema governance and operational resilience model
 5. Managed services and ongoing optimization
 Buyer priorities:
-- Minimize disruption to operations
-- Achieve measurable resilience and efficiency gains
+- Minimize disruption to live settlement operations
+- Achieve measurable resilience and visibility gains
 - Establish a scalable platform for future innovation
 - Work with a partner that can deliver both strategy and execution
 
@@ -93,30 +94,30 @@ Generate a polished proposal draft framework that a bid team could use as the ba
 
 export const EXEC_SUMMARY_COMPLIANCE = {
   free_form_text: `COMPANY PROFILE
-Company name: IBM
-Company description: We provide AI, automation, consulting, and enterprise technology solutions for regulated organizations.
+Company name: SCC, working with IBM
+Company description: We provide AI, streaming data, automation, and managed services for regulated organizations.
 Relevant experience:
-- Document processing and workflow automation
+- Real-time data streaming and event-driven integration
 - Data governance and security
 - Financial services transformation
 - Enterprise integration and managed services
 
 RFP OPPORTUNITY
-Opportunity title: Northbank Financial Services - Intelligent Document Operations Platform
-Buyer: Northbank Financial Services
+Opportunity title: Risk Intelligence Screening Platform - Real-Time Event Correlation (illustrative)
+Buyer: Risk Intelligence Screening Business
 Sector: Financial services
 Contract value: £6.5M over 3 years
 Submission deadline: 20 July
 Programme objective:
-Northbank wants a secure document intelligence solution to streamline onboarding, servicing, and compliance-heavy operations. The platform must support automated classification, data extraction, workflow routing, and auditable controls for regulated use cases.
+The business wants a secure real-time platform that correlates screening events with historical patterns to support KYC, sanctions and due diligence workflows. The platform must support streaming ingestion, anomaly detection, workflow routing, and auditable controls for regulated use cases.
 Mandatory requirements:
 1. Strong governance and audit trail capabilities
 2. Secure deployment and role-based access
-3. Integration with core banking and case management systems
-4. Support for document-heavy compliance processes
+3. Integration with core screening and case management systems
+4. Support for high-volume, low-latency event processing
 5. Implementation services, training, and operational support
 Preferred capabilities:
-- AI-assisted classification and extraction
+- AI-assisted anomaly detection
 - Human-in-the-loop review
 - Analytics and reporting
 - Scalable architecture for additional use cases

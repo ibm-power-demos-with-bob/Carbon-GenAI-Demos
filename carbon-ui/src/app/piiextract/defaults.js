@@ -1,5 +1,5 @@
 export const DEFAULTS = {
-  free_form_text: `Hello, I am Sophie Müller. I am writing to you to report an unauthorised transaction on my credit card. On 30th March 2023, I noticed a charge of €1,200 on my credit card statement that I did not authorise. The transaction was made at a restaurant in Paris, whilst I was in Berlin on that day. I am concerned about the security of my account and I would appreciate if you could investigate this matter promptly. Please contact me at my phone number +49 30 12345678 or email me at sophie.mueller@email.de to provide me with an update on the investigation. My card number is 5425233430109903. I look forward to hearing from you soon.`,
+  free_form_text: `Hello, I am Sophie Müller. I am writing to report an unauthorised transaction on the company credit card I use to pay for my Workspace data subscription. On 30th March 2026, I noticed a charge of €1,200 on my statement that I did not authorise. The transaction was made at a restaurant in Paris, whilst I was in Frankfurt on that day. I am concerned about the security of my account and I would appreciate it if you could investigate this matter promptly. Please contact me at my phone number +49 69 12345678 or email me at sophie.mueller@example-bank.de to provide me with an update on the investigation. My card number is 5425233430109903. I look forward to hearing from you soon.`,
   entities: [
     { label: "Person Name", definition: "The full name of the person submitting the complaint" },
     { label: "Email Address", definition: "The email contact information" },
@@ -48,31 +48,31 @@ Note: This data is extracted from the MRZ (Machine Readable Zone) at the bottom 
 
 // Tab 3: Unstructured Data Discovery - Document Scan (Elinar-inspired)
 export const DOCUMENT_SCAN = {
-  free_form_text: `PROJECT STATUS UPDATE - Q1 2024
+  free_form_text: `ACQUISITION DATA ONBOARDING - STATUS UPDATE
 
-Project Phoenix Migration - Internal Memo
+Acquired Data Asset Integration - Internal Memo (fictional example)
 
-Date: 15 January 2024
-From: IT Operations Team
-Subject: Legacy System Data Audit Progress
+Date: 15 January 2026
+From: Data Platform Engineering
+Subject: Acquired data asset - streaming ingestion and data audit progress
 
 Team Update:
-Our data migration project is progressing well. Lead developer Anna Kowalski (anna.kowalski@techcorp.eu, +48 22 123 4567) has completed the initial database schema review. The technical architecture team, headed by Marcus Weber, identified 847 legacy files requiring assessment.
+Our onboarding of a newly acquired data asset is progressing well. Lead engineer Anna Kowalski (anna.kowalski@example-data.eu, +48 22 123 4567) has completed the initial schema review. The integration architecture team, headed by Marcus Weber, identified 847 legacy files requiring assessment before they are published to the shared event streams.
 
 Key Findings:
-- Customer database contains approximately 125,000 records
-- Employee records system holds data from 2015-present
-- Marketing automation platform includes email campaigns sent to 89,000 subscribers
+- Subscriber database contains approximately 125,000 records, including names and corporate email addresses
+- Analyst records system holds data from 2015-present
+- Newsletter platform includes distribution lists covering 89,000 subscribers
 
 Action Items:
-1. Anna to coordinate with Data Protection Officer by 25 January
-2. Marcus Weber (m.weber@techcorp.eu) to prepare compliance documentation
-3. Schedule review meeting for 1 February 2024 at Berlin office
+1. Anna to coordinate with the Data Protection Officer by 25 January
+2. Marcus Weber (m.weber@example-data.eu) to prepare data-sharing and compliance documentation
+3. Schedule review meeting for 1 February 2026 at the London office
 
 Technical Notes:
-The Phoenix system architecture uses PostgreSQL 14.2 with Redis caching layer. Migration scripts are stored in repository phoenix-migration-2024. Initial testing shows 99.7% data integrity across test environments.
+Ingestion uses connectors into the shared streaming platform with schema validation on every topic. Migration scripts are stored in repository acquired-asset-onboarding-2026. Initial testing shows 99.7% data integrity across test environments.
 
-Contact: For questions, reach Anna Kowalski at extension 4567 or Marcus at +49 30 987 6543.
+Contact: For questions, reach Anna Kowalski at extension 4567 or Marcus at +44 20 7946 0958.
 
 End of memo.`,
   entities: [

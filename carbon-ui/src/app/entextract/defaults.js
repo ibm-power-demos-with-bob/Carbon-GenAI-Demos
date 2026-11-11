@@ -1,17 +1,25 @@
+// LSEG tailoring: tab 1 is a subscription / vendor-notice extraction (all data synthetic)
 export const DEFAULTS = {
-  free_form_text: `The name of our next book is The Hunger Games. Now, some of you might have read this book earlier, but in
-my personal opinion, reading it again won't hurt, right? It gets even more interesting when we read it a second time.
-So, the author of this book is Suzanne Collins, who wrote many books in the past, but this particular book for her
-has got a rating of 4.33/5, which I think is a pretty good number considering what we just saw for The Book Thief.
-Anyways, this book is a work of fiction, written in English and falls in the Post Apocalyptic genre. This book has 374 pages.
-It was published on the 10th of October, 2005. This book is priced at 5 dollars and 9 cents. If anyone is interested in this book,
-you can approach Mr Hofstadter after this workshop, he will be glad to sell you this book for only 3 dollars.
-Dont miss out this chance to grab such a memorable book.`,
+  free_form_text: `Subject: Streaming platform subscription - expansion and renewal summary
+
+Hello team. Quick summary ahead of Thursday's architecture and value session. The streaming platform in question is
+Confluent Platform, now an IBM company since the completion of the acquisition in March 2026. Our current subscription
+covers the Markets Technology programme only and is held directly with the vendor. The annual value is 1.8 million pounds
+(GBP 1,800,000) on a three year term that ends on 31 March 2027.
+
+The proposal from SCC, IBM's UK Platinum partner, would transition the subscription to SCC at renewal and extend it to
+Data & Analytics, FTSE Russell and Risk Intelligence. The indicative expanded annual value is 3.2 million pounds. The
+platform is self-managed on our own infrastructure, written to the existing hybrid estate, with 24/7 UK-based support.
+The programme sponsor is the Chief Technology Officer. Please send questions to Priya Raman, Head of Platform Engineering,
+before the session.`,
   entities: [
-    { label: "Title",  definition: "This is the title of the book." },
-    { label: "Author", definition: "This is author of the book. The one who wrote this book." },
-    { label: "Price",  definition: "This is the price of the book." },
-    { label: "Rating", definition: "This is the rating given for this particular book." },
-    { label: "",       definition: "" } // optional spare row for the UI
+    { label: "Platform",        definition: "The name of the streaming platform or product being discussed." },
+    { label: "Current Vendor Relationship", definition: "Who the subscription is currently held with." },
+    { label: "Proposed Partner", definition: "The reseller or partner proposed to hold the expanded subscription." },
+    { label: "Current Annual Value", definition: "The current annual subscription value, including currency." },
+    { label: "Expanded Annual Value", definition: "The indicative expanded annual subscription value, including currency." },
+    { label: "Renewal Date", definition: "The date the current subscription term ends." },
+    { label: "Contact", definition: "The named person to send questions to, with their role." },
+    { label: "",                definition: "" } // optional spare row for the UI
   ]
 };

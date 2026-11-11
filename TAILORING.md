@@ -134,3 +134,32 @@ Branch: `denmark-2026` (local only)
 | `entextract/logistics-quote.js` | KontorDirekt A/S, Aarhus → Stockholm, Danish text |
 | `convintel/defaults.js` | TechSupport Danmark call in Danish, hr. Hansen / Anders Christensen |
 | `home/page.js` | Copenhagen S-Bane automation, Digitaliseringsstyrelsen EU AI Act inspections, Gefion supercomputer, data sovereignty narrative |
+
+---
+
+## Example: LSEG 2026
+
+Branch: `lseg-demo` (local only). Tailored to the "Expanding Confluent through SCC" CTO proposal. All data is fictional.
+Run in the worktree `Carbon-GenAI-LSEG`; see [`DEMO_SCRIPT.md`](DEMO_SCRIPT.md) and [`DEMO_PREP.md`](DEMO_PREP.md).
+
+| File | Change |
+|---|---|
+| `entextract/defaults.js` | Subscription summary: Confluent Platform, SCC transition, GBP values, renewal date |
+| `entextract/it-ops-emails.js` | Italian: Borsa Italiana analyst, stalled FTSE MIB end-of-day topic (Medium). French: LCH SA clearing stream broker quorum loss (Critical) |
+| `entextract/page.js` | Tab renamed "Subscription Summary"; intro copy updated |
+| `piiextract/defaults.js` | Fraud complaint (Workspace subscription card) and acquired-data onboarding memo. Passport left unchanged |
+| `convintel/defaults.js` | SCC-LSEG discovery call; German trading-desk delayed-feed call; architecture and value session |
+| `briefbuilder/`, `rfpassistant/`, `talentacquisition/` `defaults.js` | Financial-markets data, SCC/IBM partner motion, streaming architect hiring |
+| `home/page.js` | Landing narrative for LSEG |
+| `entextract/logistics-quote.js` | **Unchanged** (Hans Geis anchor) |
+
+Deploy as a second UI on port 3003, reusing the shared llama-server and proxy:
+
+```bash
+# After the base demo (remote-launch.sh) has completed:
+LSEG_REPO=<url-of-a-repo-that-contains-the-lseg-demo-branch> \
+  bash ~/Carbon-GenAI-Demos/deployment/remote-launch-lseg.sh <fqdn>
+# Demo at http://<fqdn>:3003 ; generic demo stays on :3000
+```
+
+The `lseg-demo` branch is local by default. Either push it to a repo you control (not `main`) and set `LSEG_REPO`, or use the `scp` overlay in Step 3 above onto a base deploy.
