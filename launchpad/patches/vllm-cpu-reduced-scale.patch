@@ -1,0 +1,20 @@
+diff --git a/ai-services/assets/components/llm/vllm-cpu/podman/templates/vllm-server.yaml.tmpl b/ai-services/assets/components/llm/vllm-cpu/podman/templates/vllm-server.yaml.tmpl
+index 0d2225c..6477e16 100644
+--- a/ai-services/assets/components/llm/vllm-cpu/podman/templates/vllm-server.yaml.tmpl
++++ b/ai-services/assets/components/llm/vllm-cpu/podman/templates/vllm-server.yaml.tmpl
+@@ -53,12 +53,12 @@ spec:
+       - name: VLLM_CPU_OMP_THREADS_BIND
+         value: auto
+       - name: VLLM_CPU_KVCACHE_SPACE
+-        value: "32"
++        value: "4"
+       resources:
+         requests:
+-          memory: "150Gi"
++          memory: "24Gi"
+         limits:
+-          memory: "150Gi"
++          memory: "24Gi"
+       ports:
+         - containerPort: 8000
+       volumeMounts:

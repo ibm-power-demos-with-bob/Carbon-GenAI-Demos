@@ -1,0 +1,13 @@
+(block ai_services_nonroot
+    (blockinherit container)
+    (blockinherit net_container)
+    (allow process vfio_device_t ( blk_file ( getattr read write append ioctl lock open )))
+    (allow process vfio_device_t ( chr_file ( getattr read write append ioctl lock open )))
+    (allow process user_tmp_t ( sock_file ( getattr open read write )))
+    (allow process container_runtime_t (unix_stream_socket (connectto)))
+    (allow process sysfs_t ( dir ( getattr ioctl lock open read search )))
+    (allow process sysfs_t ( file ( getattr ioctl lock open read )))
+    (allow process sysfs_t ( fifo_file ( getattr open read lock ioctl )))
+    (allow process sysfs_t ( sock_file ( getattr open read )))
+    (roletype unconfined_r process)
+)

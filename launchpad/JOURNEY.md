@@ -566,3 +566,9 @@ During `application create` the **embedding and reranker pods end up `Stopped`**
 #### Paste this to start a new task
 > Continue the Launchpad work on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`. Read the **end of `launchpad/JOURNEY.md` from "CHECKPOINT (2026-11-13, Session 5b)"** first (long file: step 1 is to split it per the content-file-size rule).
 > Status: validation PASSED: stock `rag` + `extract1` + `summarize1` run healthy on Power10 CPU (no Spyre, Ollama LLM bundle); embedding/reranker restart loop was a podman 6.1.1 healthcheck bug, fixed with `podman update --health-cmd`. Demo = Launchpad UIs (Chat, Digitize, catalog) + Carbon pages for Extract/Summarize/PII via the `/launchpad/*` proxy + a Digitize->Extract->JSON invoice page. Lucas's existing demo on the VM is left alone. Next: follow "ordered next steps" (split file, AIX PDFs, recipe, test on a fresh reservation). Do not run plain `bootstrap configure`.
+
+
+#### Session 6 (2026-11-13, evening) - Phase A harvest started
+- Repo is now the source of truth: see launchpad/RECIPE-PLAN.md and launchpad/reference/REFERENCE-STATE.md. Harvested into the repo: lib/pty-answer.py (was ~/run_with_pw2.py), patches/vllm-cpu-reduced-scale.patch, selinux/ai_services_nonroot_policy.cil. Bundle copy in repo verified identical to the VM.
+- CORRECTION to the 'ROOT CAUSE' note above: the real problem is a non-zero healthcheck start-period (podman 6.1.1: health run fails instantly during start-period) plus on-failure restart. Fix = podman update --health-cmd ... --health-start-period 0s --health-retries 20 (details in REFERENCE-STATE.md). Applied and verified on the VM; rag1 healthy again.
+- Also found: Linger=no on the VM (recipe must enable-linger); no ~/.bash_history exists.
