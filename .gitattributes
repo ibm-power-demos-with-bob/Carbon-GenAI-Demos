@@ -16,3 +16,8 @@
 *.png       binary
 *.jpg       binary
 *.ico       binary
+
+# Launchpad recipe: files consumed on the Linux VM must be LF
+*.patch      text eol=lf
+*.cil        text eol=lf
+*.tmpl       text eol=lf
