@@ -1,0 +1,6 @@
+id: ollama
+name: "Ollama on IBM Power (CPU)"
+description: "Serves a local Ollama model through the official Launchpad LiteLLM image (OpenAI-compatible API). Demo-scale, CPU only."
+type: component
+component_type: llm
+version: "1.0.0"

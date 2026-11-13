@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "model": {
+      "type": "string",
+      "title": "Large language model (LLM)",
+      "description": "Name of a model already present in the local Ollama instance (the HF-style name is an Ollama alias of granite4, so the platform model download succeeds).",
+      "oneOf": [
+        {
+          "const": "ibm-granite/granite-4.0-micro",
+          "title": "granite4 (Granite 4.0 Micro)",
+          "description": "Granite 4.0 Micro served by Ollama on IBM Power CPU. Fast decode at demo-scale prompt sizes."
+        }
+      ],
+      "default": "ibm-granite/granite-4.0-micro"
+    },
+    "ollamaUrl": {
+      "type": "string",
+      "title": "Ollama endpoint",
+      "description": "Base URL of the Ollama server, reachable from the pod.",
+      "default": "http://host.containers.internal:11434",
+      "pattern": "^http://[A-Za-z0-9.-]+(:[0-9]+)?$"
+    }
+  }
+}

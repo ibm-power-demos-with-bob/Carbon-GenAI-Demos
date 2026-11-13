@@ -1,0 +1,5 @@
+image: "icr.io/ai-services/litellm:v1.101.2-0"
+model: "ibm-granite/granite-4.0-micro"
+ollamaUrl: "http://host.containers.internal:11434"
+maxModelLen: 32768
+maxBatchSize: 8

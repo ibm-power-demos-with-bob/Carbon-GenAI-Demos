@@ -1,0 +1,10 @@
+name: llm
+version: "1.0.0"
+
+podTemplateExecutions:
+  - [ollama-server.yaml.tmpl]
+
+resources:
+  cpu: 1
+  memory: 2147483648 # 2Gi (LiteLLM proxy only; the model runs in the Ollama container)
+  storage: 0
