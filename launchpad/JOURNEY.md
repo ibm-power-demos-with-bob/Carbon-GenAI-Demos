@@ -1,8 +1,8 @@
-# Launchpad spike — findings (branch `feature/launchpad-power-cpu`)
+# Launchpad work — findings (branch `feature/launchpad-power-cpu`)
 
 > **READ FIRST:** this file is a chronological log. The authoritative current state is the **CHECKPOINT section at the very end**.
 > Sections marked [SUPERSEDED] / [RESOLVED] are history.
-> First spike: 2026-11-12. Environment: TechZone "AI-Ready RHEL on IBM Power On-Premises",
+> First validation: 2026-11-12. Environment: TechZone "AI-Ready RHEL on IBM Power On-Premises",
 > RHEL 10.2, **Power10**, 8 cores (SMT-8, 64 logical CPUs), 48 GiB RAM, 90 GB disk. No Spyre.
 > No credentials are stored in this file or in the repo.
 
@@ -149,8 +149,8 @@ is committed on branch `feature/launchpad-power-cpu`; this file is the only new 
 - Podman needs `export XDG_RUNTIME_DIR=/run/user/1001` in non-login ssh sessions.
 
 ### Starting a new task — paste this [SUPERSEDED - use the CHECKPOINT prompt at end]
-> Continue the Launchpad spike on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`.
-> Read `LAUNCHPAD-SPIKE.md` (especially "Session 2 checkpoint") first. The VM is the existing TechZone reservation
+> Continue the Launchpad work on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`.
+> Read `launchpad/JOURNEY.md` (especially "Session 2 checkpoint") first. The VM is the existing TechZone reservation
 > "Test GenAI for Lucas" (SSH key in `%TEMP%\bob\lucas_p1370.pem`). Step 1: check whether the SELinux module
 > `ai_services_nonroot_policy` is installed (`sudo semodule -l | grep ai_services`) and fix/start
 > `ai-services--catalog-backend`; then log in to the catalog and run `~/launchpad-create.sh`. Do not run plain
@@ -274,8 +274,8 @@ Read from the v0.4.0 source on the VM (`~/src/project-ai-services`):
 - Context-window note: this session ran long; start the next one from the paste prompt below.
 
 ### Starting a new task - paste this [SUPERSEDED - use the CHECKPOINT prompt at end]
-> Continue the Launchpad spike on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`.
-> Read the END of `LAUNCHPAD-SPIKE.md` first (sections "DECISION", "Finding: a route to Launchpad-on-Ollama",
+> Continue the Launchpad work on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`.
+> Read the END of `launchpad/JOURNEY.md` first (sections "DECISION", "Finding: a route to Launchpad-on-Ollama",
 > "Session 3 result", "Session 3 end state"). Policy: Launchpad first, own demo code only where Launchpad has no service (PII,
 > passport) or there is a stated reason; LLM host is Ollama (not vLLM, not llama.cpp). The `ollama` LLM bundle is registered in
 > the catalog on the VM ("Test GenAI for Lucas", SSH key `%TEMP%\bob\lucas_p1370.pem`). Next: fix the model-download blocker
@@ -477,7 +477,7 @@ pass-through target to a sidecar on :8001) and add a tiny sidecar (same litellm 
 - Notes file encoding: edit with UTF-8 aware tools (a PowerShell `Get-Content` without `-Encoding UTF8` double-encoded the em dashes once; repaired).
 
 #### Paste this to start a new task
-> Continue the Launchpad spike on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`. Read the **CHECKPOINT at the very end of `LAUNCHPAD-SPIKE.md`** first.
+> Continue the Launchpad work on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`. Read the **CHECKPOINT at the very end of `launchpad/JOURNEY.md`** first.
 > Status: Launchpad catalog + worker + `extract1` and `summarize1` services are fully live and healthy on Power10 CPU. PII verified via Extract API. Next step: Deploy and configure Digitize (PDF/DOCX ingestion) + OpenSearch vector store with sample PDFs, and wire the UI front-end adapter. Do not run plain `bootstrap configure`.
 
 ### CHECKPOINT (2026-11-13, Session 5b) - AUTHORITATIVE CURRENT STATE
@@ -558,11 +558,11 @@ During `application create` the **embedding and reranker pods end up `Stopped`**
 
 #### Current VM state and ordered next steps (as of 2026-11-13 ~15:30 UTC)
 - VM: apps `rag1` (chat/digitize/similarity + OpenSearch + embedding + reranker + LiteLLM->Ollama), `extract1`, `summarize1`, all `running (healthy)` after the healthcheck fix. `rag1` currently holds ~20 test documents (4 smoke PDFs + 9 company + 3 generated invoices + 3 receipts); no AIX PDFs yet. Nothing was changed on Lucas's demo.
-- Not done yet: Ollama thread-cap test (`ollama create ... num_thread`), AIX PDF fetch + overnight ingest, deploying the proxy adapter / Carbon invoice page, changing the catalog admin password, committing (git: `launchpad/`, `LAUNCHPAD-SPIKE.md`, `carbon-ui/src/llama-proxy/server_final.js`, `carbon-ui/package.json` modified; stage selectively), splitting this file, the recipe itself.
+- Not done yet: Ollama thread-cap test (`ollama create ... num_thread`), AIX PDF fetch + overnight ingest, deploying the proxy adapter / Carbon invoice page, changing the catalog admin password, committing (git: `launchpad/`, `launchpad/JOURNEY.md`, `carbon-ui/src/llama-proxy/server_final.js`, `carbon-ui/package.json` modified; stage selectively), splitting this file, the recipe itself.
 - **UPDATE 2026-11-13 (user priority): the recipe so the environment can be rebuilt on any fresh reservation. Authoritative plan: `launchpad/RECIPE-PLAN.md`. New order: Phase A harvest VM-only artifacts into the repo (history, helper scripts, patch, SELinux .cil, limits files, Ollama run cmd, healthcheck fix) -> B settle open questions -> C write scripts/recipe/skill -> D acceptance test on a NEW reservation -> E optional Carbon layer. The older order below is superseded where it conflicts. User reserves MANUALLY (MCP unreliable), purpose Demo (ISC opp number), 4 days + up to 3 x 4-day extensions; recipe takes FQDN/user/key as user input. Repo home: working default = same repo/branch, `launchpad/` self-contained; nothing committed yet.**
 - Order (older): (1) split this file (index + per-session files); (2) fetch AIX PDFs (Chrome DevTools MCP), start overnight ingest into `rag1`, test Q&A; (3) Ollama cap test; (4) write recipe files (`launchpad/RECIPE-LAUNCHPAD.md`, scripts under `launchpad/`, Bob skill) including the healthcheck `podman update` fix and the Kaggle data fetch; (5) Carbon invoice page via `/launchpad/*` proxy (Digitize -> Extract -> JSON) and Carbon Extract/Summarize/PII pages re-pointed; (6) test the whole recipe on a brand-new reservation; (7) commit + push to `ibm-power-demos-with-bob/Carbon-GenAI-Demos`.
 - Secrets: SSH key `%TEMP%\bob\lucas_p1370.pem`, catalog admin password in `~/.launchpad-admin-pw` on the VM (given to the user in chat), Kaggle token `~/.kaggle/kaggle.json` on the PC. Sample data: `C:\BobWorkSpace\launchpad-sample-data\` (outside the repo). Reservation was due to end 2026-11-15; **user extended it on 2026-11-13** so it stays around next week (new end date not yet recorded).
 
 #### Paste this to start a new task
-> Continue the Launchpad spike on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`. Read the **end of `LAUNCHPAD-SPIKE.md` from "CHECKPOINT (2026-11-13, Session 5b)"** first (long file: step 1 is to split it per the content-file-size rule).
+> Continue the Launchpad work on branch `feature/launchpad-power-cpu` in `c:\BobWorkSpace\Carbon-GenAI-Demos`. Read the **end of `launchpad/JOURNEY.md` from "CHECKPOINT (2026-11-13, Session 5b)"** first (long file: step 1 is to split it per the content-file-size rule).
 > Status: validation PASSED: stock `rag` + `extract1` + `summarize1` run healthy on Power10 CPU (no Spyre, Ollama LLM bundle); embedding/reranker restart loop was a podman 6.1.1 healthcheck bug, fixed with `podman update --health-cmd`. Demo = Launchpad UIs (Chat, Digitize, catalog) + Carbon pages for Extract/Summarize/PII via the `/launchpad/*` proxy + a Digitize->Extract->JSON invoice page. Lucas's existing demo on the VM is left alone. Next: follow "ordered next steps" (split file, AIX PDFs, recipe, test on a fresh reservation). Do not run plain `bootstrap configure`.
