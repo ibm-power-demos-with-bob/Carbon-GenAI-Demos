@@ -3,7 +3,7 @@
 > Purpose: turn the validated findings (`launchpad/JOURNEY.md`) into a recipe that Bob can run against ANY fresh
 > TechZone reservation ("Here is the GitHub link, build it"), same pattern as the existing `RECIPE.md`
 > (Carbon UI + llama.cpp), which stays untouched.
-> Created 2026-11-13. Status: PLAN - nothing below is implemented yet.
+> Created 2026-11-13. Status: Phase C DRAFTED 2026-11-16 (scripts 01-06, run-all, remote-launch, RECIPE-LAUNCHPAD.md, Bob skill written; not yet run on a VM).
 
 ## Guiding rules
 
