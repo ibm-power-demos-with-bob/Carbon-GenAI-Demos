@@ -1,0 +1,21 @@
+{
+  "name": "invoice-review-ui",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@carbon/icons-react": "^11.83.0",
+    "@carbon/react": "^1.111.1",
+    "@carbon/styles": "^1.111.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.0"
+  }
+}

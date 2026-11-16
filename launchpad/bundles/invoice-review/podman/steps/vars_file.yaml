@@ -1,0 +1,8 @@
+containers:
+  - name: "invoice-review-{{ .InstanceSlug }}-invoice-review"
+    format: ".Status"
+    alias: UI_STATUS
+
+  - name: "invoice-review-{{ .InstanceSlug }}-invoice-review"
+    format: ".Status"
+    alias: API_STATUS

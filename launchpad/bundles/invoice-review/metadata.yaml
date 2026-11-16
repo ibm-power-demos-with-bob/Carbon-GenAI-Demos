@@ -1,0 +1,33 @@
+id: invoice-review
+name: "Invoice Review (demo)"
+version: "0.2.0"
+description: "Demo service with its own UI: extraction queue, side-by-side invoice review and a simulated export to IBM i Db2 or AIX Oracle. Extraction is mock data and the export is simulated (nothing is sent to any database)."
+type: service
+
+# Custom bundles cannot claim certified_by: IBM.
+certified_by: "ISV"
+
+dependencies:
+  - id: llm
+
+standalone: true
+
+about:
+  - title: "Service details"
+    sections:
+      - title: "Version"
+        value: "0.2.0"
+      - title: "Inference backend"
+        values:
+          - "Ollama on IBM Power (CPU)"
+  - title: "Expected resource consumption"
+    sections:
+      - title: "per 5 concurrent users"
+        values:
+          - title: "Compute"
+            value: "500m CPU"
+          - title: "Memory"
+            value: "256 MB"
+          - title: "Storage"
+            value: "0 GB (no persistent storage)"
+

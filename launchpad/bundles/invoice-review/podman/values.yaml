@@ -1,0 +1,6 @@
+invoice:
+  port: ""
+  # Built on the VM from launchpad/services/invoice-review (see launchpad/bundles/invoice-review/README.md)
+  image: localhost/invoice-review:0.2.0
+  log_level: "INFO"
+

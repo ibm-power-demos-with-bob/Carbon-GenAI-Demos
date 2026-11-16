@@ -1,0 +1,49 @@
+.app-content { padding: 2rem 2rem 4rem; margin-top: 3rem; background: #f4f4f4; min-height: calc(100vh - 3rem); }
+.page-title { font-size: 2rem; font-weight: 300; margin: 1rem 0 .5rem; }
+.page-intro { color: #525252; margin-bottom: 1.5rem; max-width: 56rem; }
+.panel { background: #fff; padding: 1rem; }
+.muted { color: #6f6f6f; font-size: .75rem; }
+.error { color: #da1e28; }
+
+.status { display: inline-flex; align-items: center; gap: .5rem; line-height: 1.25; }
+.dot { width: .625rem; height: .625rem; border-radius: 50%; background: #8d8d8d; display: inline-block; }
+.dot.st-review { background: #f1c21b; }
+.dot.st-done { background: #24a148; }
+
+.stage { min-width: 14rem; }
+.stage-label { font-weight: 600; font-size: .875rem; }
+.stage-bar { display: flex; gap: 2px; margin-top: .25rem; width: 11rem; }
+.seg { height: 4px; flex: 1; background: #c6c6c6; }
+.seg.on.st-pending { background: #8d8d8d; }
+.seg.on.st-extracting { background: #0f62fe; }
+.seg.on.st-review { background: #f1c21b; }
+.seg.on.st-done { background: #24a148; }
+.stage-source { color: #6f6f6f; font-size: .75rem; margin-top: .25rem; }
+td.action { text-align: right; }
+
+.review { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; align-items: start; margin-top: 1rem; }
+.doc-pane { position: sticky; top: 4rem; }
+.doc-head { margin-bottom: .25rem; }
+.pdf { width: 100%; height: 70vh; border: 0; margin-top: 1rem; background: #fff; }
+.fields-pane { background: #fff; padding: 0 1rem 1rem; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding-bottom: 1rem; }
+.items { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+.items th { text-align: left; font-size: .75rem; font-weight: 400; color: #525252; padding: 0 .25rem .25rem; }
+.items td { padding: .125rem .25rem; }
+.actions { display: flex; gap: 1rem; justify-content: flex-end; padding-top: 1rem; }
+.actions .cds--btn { max-width: 12rem; }
+
+.modal-intro { margin-bottom: 1rem; }
+.modal-type { margin: .5rem 0 1rem; }
+
+@media (max-width: 66rem) { .review { grid-template-columns: 1fr; } .doc-pane { position: static; } }
+
+.span2 { grid-column: 1 / -1; }
+.items { table-layout: fixed; }
+.items th:nth-child(1) { width: 34%; }
+.items th:nth-child(2) { width: 11%; }
+.items th:nth-child(3) { width: 19%; }
+.items th:nth-child(4) { width: 11%; }
+.items th:nth-child(5) { width: 25%; }
+.items .cds--text-input { padding: 0 .5rem; }
+.fields-pane .cds--accordion__content { padding-inline: 1rem; }

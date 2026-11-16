@@ -1,0 +1,10 @@
+name: invoice-review
+version: "0.2.0"
+podTemplateExecutions:
+  - [invoice-review.yaml.tmpl]
+
+resources:
+  cpu: 1
+  memory: 268435456 # 256Mi
+  storage: 0
+

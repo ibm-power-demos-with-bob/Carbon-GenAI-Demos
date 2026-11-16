@@ -1,0 +1,18 @@
+# Built ON the Power VM (ppc64le):  podman build -t localhost/invoice-review:0.2.0 launchpad/services/invoice-review
+# ubi9/nodejs-22 publishes ppc64le (checked 2026-11-16). /opt/app-root/src is owned by the image's non-root user.
+# UNPROVEN on ppc64le: vite/rollup/esbuild native optional packages during `npm ci` (first fresh-reservation run).
+
+FROM registry.access.redhat.com/ubi9/nodejs-22:latest AS build
+WORKDIR /opt/app-root/src
+COPY ui/package.json ui/package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY ui/ ./
+RUN npm run build
+
+FROM registry.access.redhat.com/ubi9/nodejs-22:latest
+WORKDIR /opt/app-root/src
+COPY server.js sample-data.js pdf.js ./
+COPY --from=build /opt/app-root/src/dist ./dist
+ENV PORT=8080
+EXPOSE 8080
+CMD ["node", "server.js"]
