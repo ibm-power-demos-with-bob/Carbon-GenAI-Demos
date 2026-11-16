@@ -1,5 +1,8 @@
 # Checkpoint — Carbon GenAI IBM Power Recipe
 
+> **Branch `feature/launchpad-power-cpu`:** the current checkpoint for this branch is **`launchpad/JOURNEY.md`** (see its "CHECKPOINT (2026-11-16, Session 8)" section at the end; plan in `launchpad/RECIPE-PLAN.md`).
+> The content below is the older checkpoint for the generic GenAI demo and is not current for this work.
+
 > Last updated: 2026-09-10
 
 ---
